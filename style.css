@@ -223,11 +223,17 @@
    margin-top: 4rem;
  }
 
- .skills-img img {
-   width: 40%;
-   padding-left: 2rem;
-   object-position: left;
- }
+ .skills-img {
+    float: left;
+    width: 200px; /* Set the desired width */
+    margin-right: 20px; /* Optional: adds space to the right of the image */
+}
+
+.skills-img img {
+    width: 100%; /* Make the image fit the width of the container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
 
  .bars-box {
    position: relative;
