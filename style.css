@@ -216,22 +216,37 @@
  }
 
  .skills-container {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   align-items: center;
-   gap: 2rem;
-   margin-top: 4rem;
- }
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
 
- .skills-img {
-    float: left;
-    width: 200px; /* Set the desired width */
-    margin-right: 20px; /* Optional: adds space to the right of the image */
+.skills-img {
+    flex: 0 0 40%; /* Adjust the width as needed */
 }
 
 .skills-img img {
-    width: 100%; /* Make the image fit the width of the container */
-    height: auto; /* Maintain the aspect ratio */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 0;
+    object-position: center;
+}
+
+.skills-text {
+    flex: 1;
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-img {
+        width: 100%;
+        padding-top: 2rem;
+    }
 }
 
 
